@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Instituciones</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Instituciones</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--CARTAS DE LAS INSTITUCIONES-->
+  <ion-card (click)="seleccionarInstitucion('Colegio 1')"  class="ion-text-center">
+    <ion-item >
+      <img alt="Silhouette of mountains" src="https://docs-demo.ionic.io/assets/madison.jpg" />
+    </ion-item>
+
+      <ion-card-header>
+        <ion-card-title>Colegio 1</ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content>
+      Direccion 45 Norte, 5768
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center" (click) ="seleccionarInstitucion('Colegio 2')">
+    <ion-item >
+      <img alt="Silhouette of mountains" src="https://docs-demo.ionic.io/assets/madison.jpg" />
+    </ion-item>
+
+      <ion-card-header>
+        <ion-card-title>Colegio 2</ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content>
+      Direccion Calle #67 Los bananos
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center"  (click)="seleccionarInstitucion('Colegio 3')">
+    <ion-item >
+      <img alt="Silhouette of mountains" src="https://docs-demo.ionic.io/assets/madison.jpg" />
+    </ion-item>
+
+      <ion-card-header>
+        <ion-card-title>Colegio 3</ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content>
+      Direccion Avenida SiempreViva 56
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

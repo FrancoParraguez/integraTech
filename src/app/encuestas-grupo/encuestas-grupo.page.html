@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Encuesta Por Grupos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Formulario -->
+  <form [formGroup]="surveyForm">
+    <!-- Iterar sobre el FormArray de preguntas -->
+    <div formArrayName="questions">
+      <ion-card class="cardContent" *ngFor="let question of questions().controls; let i = index" [formGroupName]="i">
+        <ion-card-header>
+          <ion-input placeholder="Escribe tu pregunta aquí" formControlName="questionText"></ion-input>
+        </ion-card-header>
+
+        <ion-radio-group formControlName="option">
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-label><ion-radio value="option1">No logrado</ion-radio></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><ion-radio value="option2">Medianamente logrado</ion-radio></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><ion-radio value="option3">Logrado</ion-radio></ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label><ion-radio value="option4">Completamente logrado</ion-radio></ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-radio-group>
+
+        <!-- Botón para eliminar una pregunta -->
+        <ion-button color="danger" (click)="removeQuestion(i)">Eliminar Pregunta</ion-button>
+      </ion-card>
+    </div>
+
+    <!-- Botón para agregar una nueva pregunta -->
+    <ion-card>
+      <ion-card-content>
+        <ion-button (click)="addQuestion()">+</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Botón para enviar el formulario -->
+    <ion-button type="submit" (click)="submitSurvey()">Enviar Encuesta</ion-button>
+  </form>
+</ion-content>

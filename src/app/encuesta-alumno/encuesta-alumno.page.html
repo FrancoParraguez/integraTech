@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Encuesta Alumnos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">EncuestaAlumnos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Pregunta 1</ion-card-title>
+      <ion-card-subtitle>¿Cómo te sientes?</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-radio-group>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <span style="font-size: 40px;">😊</span>
+            </ion-thumbnail>
+            <ion-label>¡Me encantó!</ion-label>
+            <ion-radio slot="start" value="item1"></ion-radio>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <span style="font-size: 40px;">🙂</span>
+            </ion-thumbnail>
+            <ion-label>Me gustó</ion-label>
+            <ion-radio slot="start" value="item2"></ion-radio>
+          </ion-item>
+  
+          <ion-item>
+            <ion-thumbnail slot="start">
+              <span style="font-size: 40px;">😐</span>
+            </ion-thumbnail>
+            <ion-label>Está bien</ion-label>
+            <ion-radio slot="start" value="item3"></ion-radio>
+          </ion-item>
+  
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <span style="font-size: 40px;">🙁</span>
+            </ion-thumbnail>
+            <ion-label>No me gustó mucho</ion-label>
+            <ion-radio slot="start" value="item4"></ion-radio>
+          </ion-item>
+  
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <span style="font-size: 40px;">😡</span>
+            </ion-thumbnail>
+            <ion-label>No me gustó nada</ion-label>
+            <ion-radio slot="start" value="item5"></ion-radio>
+          </ion-item>
+  
+        </ion-list>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
